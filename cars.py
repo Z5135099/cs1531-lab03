@@ -26,18 +26,21 @@ class Car:
 	def getCurrentStatus(self):
 		return self.__currentStatus
 
-	def setType(self, type):
-		if type in ['small', 'medium', 'large', 'premium']:
-			self.__type = type
-		else:
-			raise Exception('A car\'s type can only be small, medium, large, or premium')
-
-	def getType(self):
-		return self.__type
-
 	def setMakeAndModel(self, makeAndModel):
 		self.__makeAndModel = makeAndModel
 
 	def getMakeAndModel(self):
 		return self.__makeAndModel
 
+class SmallCar(Car):
+	def __init__(self, dailyFee, currentStatus, type, makeAndModel, registrationDetails):
+		super().__init(self, dailyFee, currentStatus, type, makeAndModel, registrationDetails)
+class MediumCar(Car):
+	def __init__(self, dailyFee, currentStatus, type, makeAndModel, registrationDetails):
+		super().__init(self, dailyFee, currentStatus, type, makeAndModel, registrationDetails)
+class LargeCar(Car):
+	def __init__(self, dailyFee, currentStatus, type, makeAndModel, registrationDetails):
+		super().__init(self, dailyFee, currentStatus, type, makeAndModel, registrationDetails)
+class PremiumCar(Car):
+	def __init__(self, dailyFee, currentStatus, type, makeAndModel, registrationDetails):
+		super().__init(self, dailyFee, currentStatus, type, makeAndModel, registrationDetails)
