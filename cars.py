@@ -1,11 +1,9 @@
-from ABC import ABC, abstractfunction
-
 class Car:
-	def __init__(self, dailyFee currentStatus, type, makeAndModel, registrationDetails):
+	def __init__(self, dailyFee, currentStatus, makeAndModel, registration):
 		self.__dailyFee = dailyFee
 		self.__currentStatus = currentStatus
 		self.__makeAndModel = makeAndModel
-		self.__registrationDetails = registrationDetails
+		self.__registration = registration
 
 	def setDailyFee(self, dailyFee):
 		if(dailyFee > 0):
@@ -14,7 +12,7 @@ class Car:
 			raise Exception('A daily fee can not be negative.')
 
 	def getDailyFee(self):
-		return self__dailyFee
+		return self.__dailyFee
 
 	def setCurrentStatus(self, currentStatus):
 		if currentStatus in ['available', 'booked', 'in repair']:
@@ -31,19 +29,18 @@ class Car:
 	def getMakeAndModel(self):
 		return self.__makeAndModel
 
+	def getRegistration(self):
+		return self.__registration
+
 class SmallCar(Car):
-	def __init__(self, dailyFee, currentStatus, type, makeAndModel, registrationDetails):
-		super().__init(self, dailyFee, currentStatus, type, makeAndModel, registrationDetails)
-		self.__type = 'small'
+	def __init__(self, dailyFee, currentStatus, makeAndModel, registrationDetails):
+		super().__init__(dailyFee, currentStatus, makeAndModel, registrationDetails)
 class MediumCar(Car):
-	def __init__(self, dailyFee, currentStatus, type, makeAndModel, registrationDetails):
-		super().__init(self, dailyFee, currentStatus, type, makeAndModel, registrationDetails)
-		self.__type = 'medium'
+	def __init__(self, dailyFee, currentStatus, makeAndModel, registrationDetails):
+		super().__init__(dailyFee, currentStatus, makeAndModel, registrationDetails)
 class LargeCar(Car):
-	def __init__(self, dailyFee, currentStatus, type, makeAndModel, registrationDetails):
-		super().__init(self, dailyFee, currentStatus, type, makeAndModel, registrationDetails)
-		self.__type = 'large'
+	def __init__(self, dailyFee, currentStatus, makeAndModel, registrationDetails):
+		super().__init__(dailyFee, currentStatus, makeAndModel, registrationDetails)
 class PremiumCar(Car):
-	def __init__(self, dailyFee, currentStatus, type, makeAndModel, registrationDetails):
-		super().__init(self, dailyFee, currentStatus, type, makeAndModel, registrationDetails)
-		self.__type = 'premium'
+	def __init__(self, dailyFee, currentStatus, makeAndModel, registrationDetails):
+		super().__init__(dailyFee, currentStatus, makeAndModel, registrationDetails)
