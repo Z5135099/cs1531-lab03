@@ -1,4 +1,4 @@
-class booking():
+class Booking():
     def __init__(self,period,pickUp,dropOff,insurance,name,licenceNum,age,email,car):
         self.__period = period
         self.__costumerName = name
