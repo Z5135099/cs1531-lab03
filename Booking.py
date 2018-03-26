@@ -13,6 +13,7 @@ class booking():
     def calculation(self):
         
         self.__price = (self.__car.getDailyFee())*self.__period
+<<<<<<< HEAD
         if car.type == 'large':
             self.__price = self.__price * 1.05
             
@@ -21,8 +22,4 @@ class booking():
         return self.__price    
             
     def __str__(self):
-        return "Costumer name:%s\nPick up location:%s\nDrop off location:%s\n
-        Car type:%s\nPeriod:%s\nPrice:%f\n%(self.__name)(self.__pickUpLocation)
-        (self.__dropOffLocation)(self.__car.getType())(self.__period)
-        (self.__price)"
-        
+        return "Costumer name:%s\nPick up location:%s\nDrop off location:%s\nCar type:%s\nPeriod:%s\nPrice:%f\n"%(self.__name)(self.__pickUpLocation)(self.__dropOffLocation)(self.__car.getType())(self.__period)(self.__price)
