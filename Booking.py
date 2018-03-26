@@ -13,10 +13,10 @@ class booking():
     def calculation(self):
         
         self.__price = (self.__car.getDailyFee())*self.__period
-        if car.size is large:
+        if car.type == 'large':
             self.__price = self.__price * 1.05
             
-        if car.type is perium:
+        if car.type == 'premium':
             self.__price = self.__price * 1.2
         return self.__price    
             
