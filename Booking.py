@@ -1,5 +1,5 @@
 class Booking():
-    def __init__(self,period,pickUp,dropOff,insurance,name,licenceNum,age,email,car):
+    def __init__(self,period,pickUp,dropOff,insurance,name,licenceNum,age,email,booked_car):
         self.__period = period
         self.__costumerName = name
         self.__costumerLicence = licenceNum
@@ -8,7 +8,7 @@ class Booking():
         self.__pickUpLocation = pickUp
         self.__dropOffLocation = dropOff
         self.__insurance = insurance
-        self.__car = car
+        self.__car = booked_car
         
     def calculation(self):
         if self.__car.getCurrentStatus() is 'available':
