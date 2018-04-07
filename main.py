@@ -15,7 +15,8 @@ print('We have the following cars available:')
 for car in cars:
 	print(cars.index(car), end=': ')
 	print('A {} for ${} with registration number {}'.format(car.getMakeAndModel(), car.getDailyFee(), car.getRegistration()))
-
+for car in cars:
+	Booking(period=3,pickUp='UNSW',dropOff='Central station',insurance='Yes',name='Andrew',licenceNum='123456',age=18,email='AndrewZhang@outlook.com',booked_car=car)
 
 
 
