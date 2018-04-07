@@ -1,9 +1,10 @@
 class Car:
-	def __init__(self, dailyFee, currentStatus, makeAndModel, registration):
+	def __init__(self, dailyFee, currentStatus, makeAndModel, registration,carSize):
 		self.__dailyFee = dailyFee
 		self.__currentStatus = currentStatus
 		self.__makeAndModel = makeAndModel
 		self.__registration = registration
+		self.__size = carSize
 
 	def setDailyFee(self, dailyFee):
 		if(dailyFee > 0):
@@ -31,16 +32,19 @@ class Car:
 
 	def getRegistration(self):
 		return self.__registration
+		
+	def getSize(self):
+		return self.__size
 
 class SmallCar(Car):
-	def __init__(self, dailyFee, currentStatus, makeAndModel, registrationDetails):
-		super().__init__(dailyFee, currentStatus, makeAndModel, registrationDetails)
+	def __init__(self, dailyFee, currentStatus, makeAndModel, registrationDetails,carSize):
+		super().__init__(dailyFee, currentStatus, makeAndModel, registrationDetails,carSize)
 class MediumCar(Car):
-	def __init__(self, dailyFee, currentStatus, makeAndModel, registrationDetails):
-		super().__init__(dailyFee, currentStatus, makeAndModel, registrationDetails)
+	def __init__(self, dailyFee, currentStatus, makeAndModel, registrationDetails,carSize):
+		super().__init__(dailyFee, currentStatus, makeAndModel, registrationDetails,carSize)
 class LargeCar(Car):
-	def __init__(self, dailyFee, currentStatus, makeAndModel, registrationDetails):
-		super().__init__(dailyFee, currentStatus, makeAndModel, registrationDetails)
+	def __init__(self, dailyFee, currentStatus, makeAndModel, registrationDetails,carSize):
+		super().__init__(dailyFee, currentStatus, makeAndModel, registrationDetails,carSize)
 class PremiumCar(Car):
-	def __init__(self, dailyFee, currentStatus, makeAndModel, registrationDetails):
-		super().__init__(dailyFee, currentStatus, makeAndModel, registrationDetails)
+	def __init__(self, dailyFee, currentStatus, makeAndModel, registrationDetails,carSize):
+		super().__init__(dailyFee, currentStatus, makeAndModel, registrationDetails,carSize)
